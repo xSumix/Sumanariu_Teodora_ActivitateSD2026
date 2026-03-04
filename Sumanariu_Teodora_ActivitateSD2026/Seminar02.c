@@ -28,6 +28,7 @@ void afisare(struct Telefon t) {
 	printf("producator: %d\n", t.producator);
 	printf("pret: %d\n", t.pret);
 	printf("seira: %d\n", t.serie);
+
 }
 
 void afisareVector(struct Telefon* vector, int nrElemente) {
