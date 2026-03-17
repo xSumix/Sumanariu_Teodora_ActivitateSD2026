@@ -56,25 +56,25 @@ void afisareMasina(Masina masina) {
 	printf("Serie: %c\n\n", masina.serie);
 }
 
-void adaugaMasinaInLista(Nod** lista, Masina masinaNoua)
+void adaugaMasinaInLista(Nod** cap, Masina masinaNoua)
 {
 	//adauga la final in lista primita o noua masina pe care o primim ca parametru
-	Nod* nou = malloc(sizeof(Nod));//alocam memorie pentru un nod nou
-	nou->info = masinaNoua;//completam campul info cu masina primita ca parametru
+	Nod* temp = malloc(sizeof(Nod));//alocam memorie pentru un nod nou
+	temp->info = masinaNoua;//completam campul info cu masina primita ca parametru
 	//facem shallow copy ca sa dezalocam o singura data, nu de 2 ori in czul in  care faceam deepcpoy
-	nou->next = NULL;
-	Nod* aux = *lista;//auxiliar pentru a parcurge lista
-	if ((*lista) != NULL)//daca lista nu e vida
+	temp->next = NULL;
+	if ((*cap) != NULL)//daca lista nu e vida
 	{
-		while (aux->next != NULL)
+		Nod* p = *cap;
+		while (p->next != NULL)
 		{
-			aux = aux->next;
+			p = p->next;
 		}
-		aux->next = nou;//legam ultimul nod de nodul nou creat
+		p->next = temp;//legam ultimul nod de nodul nou creat
 	}
 	else
 	{
-		*lista = nou;//daca lista e vida, nodul nou devine primul nod din lista
+		*cap = temp;//daca lista e vida, nodul nou devine primul nod din lista
 		return;
 	}
 }
@@ -82,12 +82,10 @@ void adaugaMasinaInLista(Nod** lista, Masina masinaNoua)
 
 void afisareListaMasini(Nod* cap)
 {
-	//afiseaza toate elemente de tip masina din lista simplu inlantuita
-	//prin apelarea functiei afisareMasina()
-	while (cap != NULL)
+	while (cap)
 	{
 		afisareMasina(cap->info);
-		cap = cap->next;//trebuie sa trecem la urmatorul nod
+		cap = cap->next;
 	}
 }
 
@@ -113,12 +111,12 @@ Nod* citireListaMasiniDinFisier(const char* numeFisier)
 }
 //void pointer <=> void* = pointer la orice tip de data
 //stramosul lui template
-///void* returneaza un pointer
+//void* returneaza un pointer
 
-void dezalocareListaMasini(Nod** lista)
+void dezalocareListaMasini(Nod** aux)
 {
 	//sunt dezalocate toate masinile si lista de elemente
-	Nod* head = *lista;
+	Nod* head = *aux;
 	Nod* next = NULL;
 	while (head != NULL)
 	{
@@ -128,7 +126,7 @@ void dezalocareListaMasini(Nod** lista)
 		free(head);
 		head = next;
 	}
-	*lista = NULL;//lista devine vida
+	*aux = NULL;//lista devine vida
 }
 
 float calculeazaPretMediu(Nod* lista) {
@@ -146,13 +144,41 @@ float calculeazaPretMediu(Nod* lista) {
 		return 0;
 }
 
-void stergeMasiniDinSeria(/*lista masini*/ char serieCautata) {
-	//sterge toate masinile din lista care au seria primita ca parametru.
-	//tratati situatia ca masina se afla si pe prima pozitie, si pe ultima pozitie
+void stergeMasiniDinSeria(Nod** lista, char serieCautata) {
+	Nod* curent = *lista;
+	Nod* anterior = NULL;
+
+	while (curent != NULL) {
+		if (curent->info.serie == serieCautata) {
+			Nod* deSters = curent;
+			curent = curent->next;
+			if (anterior == NULL)
+				*lista = curent;
+			else
+				anterior->next = curent;
+
+			free(deSters->info.model);
+			free(deSters->info.numeSofer);
+			free(deSters);
+		}
+		else {
+			anterior = curent;
+			curent = curent->next;
+		}
+	}
 }
 
-float calculeazaPretulMasinilorUnuiSofer(/*lista masini*/ const char* numeSofer) {
-	//calculeaza pretul tuturor masinilor unui sofer.
+float calculeazaPretulMasinilorUnuiSofer(Nod* lista, const char* numeSofer) {
+	float suma = 0;
+	while (lista) {
+		if (strcmp(lista->info.numeSofer, numeSofer) == 0) {
+			suma += lista->info.pret;
+			lista = lista->next;
+		}
+		else {
+			lista = lista->next;
+		}
+	}
 	return 0;
 }
 
