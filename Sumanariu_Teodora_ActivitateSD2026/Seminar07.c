@@ -172,6 +172,7 @@ float* calculeazaPreturiMediiPerClustere(HashTable ht, int* nrClustere) {
 	return NULL;
 }
 
+
 Masina getMasinaDupaId(HashTable ht, int id) {
 	Masina m;
 	//cauta masina dupa valoarea atributului cheie folosit in calcularea hash-ului

@@ -1,0 +1,90 @@
+1,6,0,Strike,Attack,Ironclad,C,3.50
+2,0,5,Defend,Skill,Ironclad,C,3.00
+3,8,0,Bash,Attack,Ironclad,C,4.25
+4,0,0,Offering,Skill,Ironclad,R,9.75
+5,12,0,Anger,Attack,Ironclad,C,3.75
+6,0,8,Shrug It Off,Skill,Ironclad,C,3.25
+7,14,0,Pommel Strike,Attack,Ironclad,C,4.00
+8,0,0,Battle Trance,Skill,Ironclad,U,7.50
+9,18,0,Reckless Charge,Attack,Ironclad,C,4.50
+10,0,0,Impervious,Skill,Ironclad,R,11.00
+11,6,0,Strike,Attack,Silent,C,3.50
+12,0,5,Defend,Skill,Silent,C,3.00
+13,6,0,Neutralize,Attack,Silent,C,4.75
+14,0,0,Survivor,Skill,Silent,C,3.25
+15,0,0,Acrobatics,Skill,Silent,C,3.00
+16,0,0,Blur,Skill,Silent,U,8.25
+17,5,5,Flying Knee,Attack,Silent,C,4.00
+18,0,0,Prepared,Skill,Silent,C,2.75
+19,0,0,Backflip,Skill,Silent,C,3.50
+20,9,0,Predator,Attack,Silent,U,7.00
+21,6,0,Strike,Attack,Defect,C,3.50
+22,0,5,Defend,Skill,Defect,C,3.00
+23,0,0,Zap,Skill,Defect,C,3.75
+24,0,0,Dualcast,Skill,Defect,U,8.00
+25,10,0,Ball Lightning,Attack,Defect,C,4.25
+26,0,0,Compile Driver,Skill,Defect,C,3.25
+27,7,0,Cold Snap,Attack,Defect,C,4.00
+28,0,0,Hologram,Skill,Defect,U,7.75
+29,0,0,Recursion,Skill,Defect,C,3.50
+30,15,0,Meteor Strike,Attack,Defect,R,13.50
+31,6,0,Strike,Attack,Watcher,C,3.50
+32,0,5,Defend,Skill,Watcher,C,3.00
+33,0,0,Eruption,Skill,Watcher,C,4.00
+34,0,0,Vigilance,Skill,Watcher,C,3.75
+35,8,0,Consecrate,Attack,Watcher,C,4.50
+36,0,0,Evaluate,Skill,Watcher,C,3.25
+37,0,0,Halt,Skill,Watcher,U,7.25
+38,10,0,Sash Whip,Attack,Watcher,C,4.75
+39,0,0,Prostrate,Skill,Watcher,C,3.00
+40,0,0,Scrawl,Skill,Watcher,R,10.50
+41,0,0,Blind,Skill,Colorless,C,2.50
+42,0,0,Dark Shackles,Skill,Colorless,U,6.50
+43,0,0,Flash of Steel,Attack,Colorless,C,3.00
+44,0,0,Good Instincts,Skill,Colorless,C,2.75
+45,0,0,Panacea,Skill,Colorless,U,8.50
+46,0,0,Apotheosis,Skill,Colorless,R,14.00
+47,0,0,Chrysalis,Skill,Colorless,R,12.75
+48,0,0,Hand of Greed,Attack,Colorless,R,11.50
+49,0,0,Magnetism,Power,Colorless,R,13.00
+50,0,0,Master of Strategy,Skill,Colorless,R,10.25
+51,24,0,Feed,Attack,Ironclad,R,12.00
+52,0,0,Flame Barrier,Skill,Ironclad,U,8.75
+53,18,0,Clothesline,Attack,Ironclad,C,5.00
+54,0,0,Entrench,Skill,Ironclad,U,7.00
+55,7,7,Sword Boomerang,Attack,Ironclad,C,4.25
+56,0,0,Bloodletting,Skill,Ironclad,U,6.75
+57,21,0,Carnage,Attack,Ironclad,U,9.00
+58,0,0,Disarm,Skill,Ironclad,U,8.00
+59,10,0,Thunderclap,Attack,Ironclad,C,4.50
+60,0,0,Spot Weakness,Skill,Ironclad,U,7.50
+61,0,0,Adrenaline,Skill,Silent,R,11.75
+62,0,0,Burst,Skill,Silent,R,12.50
+63,8,0,Choke,Attack,Silent,U,7.75
+64,0,0,Concentrate,Skill,Silent,U,6.50
+65,8,0,Die Die Die,Attack,Silent,R,13.25
+66,0,0,Endless Agony,Skill,Silent,C,3.75
+67,0,0,Envenom,Power,Silent,U,8.25
+68,0,0,Footwork,Power,Silent,U,9.50
+69,11,0,Glass Knife,Attack,Silent,U,7.25
+70,0,0,Grand Finale,Attack,Silent,R,14.50
+71,0,0,Aggregate,Skill,Defect,U,7.00
+72,0,0,Auto-Shields,Skill,Defect,U,8.50
+73,9,0,Barrage,Attack,Defect,C,4.25
+74,0,0,Beam Cell,Skill,Defect,C,3.50
+75,0,0,Biased Cognition,Power,Defect,R,13.75
+76,0,0,Buffer,Power,Defect,R,12.25
+77,11,0,Claw,Attack,Defect,C,3.75
+78,0,0,Consume,Skill,Defect,U,8.00
+79,0,0,Darkness,Skill,Defect,U,7.50
+80,0,0,Defragment,Power,Defect,U,9.25
+81,0,0,Alpha,Skill,Watcher,R,11.25
+82,0,0,Battle Hymn,Power,Watcher,U,8.75
+83,7,0,Bowling Bash,Attack,Watcher,C,4.75
+84,0,0,Brilliance,Attack,Watcher,R,12.00
+85,0,0,Collect,Power,Watcher,R,13.50
+86,0,0,Conclude,Skill,Watcher,U,7.25
+87,14,0,Cut Through Fate,Attack,Watcher,U,8.25
+88,0,0,Deceive Reality,Skill,Watcher,U,9.00
+89,0,0,Empty Body,Skill,Watcher,C,3.25
+90,0,0,Empty Fist,Attack,Watcher,C,4.00
