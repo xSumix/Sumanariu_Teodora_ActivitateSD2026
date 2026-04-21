@@ -133,26 +133,31 @@ ldi citireStackCardsDinFisierLDI(const char* numeFisier) {
 	return stiva;
 }
 
-void dezalocareStivaDeMasiniLDI(ldi* stiva) {
-	while (stiva->head) {
-		dnod* aux = stiva->head;
-		free(stiva->head->thing.Name);
-		free(stiva->head->thing.Type);
-		free(stiva->head->thing.Character);
-		stiva->head = stiva->head->next;
-		free(aux);
-	}
+void dezalocareStivaDeCardLDI(ldi* stiva) {
+	if (stiva != NULL)
+		while (stiva->head) {
+			dnod* aux = stiva->head;
+			stiva->head = stiva->head->next;
+			if (aux->thing.Name) free(aux->thing.Name);
+			if (aux->thing.Type) free(aux->thing.Type);
+			if (aux->thing.Character) free(aux->thing.Character);
+
+			free(aux);
+		}
+	stiva->head = NULL;
 	stiva->tail = NULL;
 }
 
 //metode de  procesare
-card getMasinaByID_LDI(ldi stiva, int id) {
+card getCardByID_LDI(ldi stiva, int id) {
 	card rez;
 	if (!stiva.head) {
 		rez.ID = -1;
 		return rez;
 	}
-	dnod* stivAux = NULL;
+	ldi stivAux;
+	stivAux.head = NULL;
+	stivAux.tail = NULL;
 	while (stiva.head) {
 		card caux = popStackLDI(&stiva);
 		if (caux.ID == id) {
@@ -161,7 +166,7 @@ card getMasinaByID_LDI(ldi stiva, int id) {
 		}
 		pushStackLDI(&stivAux, caux);
 	}
-	while (stivAux) {
+	while (stivAux.head != NULL) {
 		pushStackLDI(&stiva, popStackLDI(&stivAux));
 	}
 	return rez;
@@ -200,7 +205,9 @@ int main() {
 	pushStackLDI(&stiva, c);
 	afisareStackCardsLDI(stiva);
 	printf("\n");
-	dezalocareStivaDeMasiniLDI(&stiva);
+	c = getCardByID_LDI(stiva, 45);
+	afisareCard(c);
+	dezalocareStivaDeCardLDI(&stiva);
 	afisareStackCardsLDI(stiva);
 	return 0;
 }
