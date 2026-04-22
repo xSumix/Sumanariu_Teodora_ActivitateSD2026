@@ -196,36 +196,42 @@ VHT citireVHT(const char* numeFisier) {
 
 //AFISARE
 void afisareSLL_HT(SLL_HT ht) {
-	for (int i = 0; i < ht.dim; i++) {
-		printf("CLUSTER [%d]: ", i);
-		nod* aux = ht.list[i];
-		while (aux) {
-			afisareCard(aux->info);
-			aux = aux->next;
+	if (!ht.list) printf("nu e nmk aici bre");
+	else
+		for (int i = 0; i < ht.dim; i++) {
+			printf("CLUSTER [%d]: ", i);
+			nod* aux = ht.list[i];
+			while (aux) {
+				afisareCard(aux->info);
+				aux = aux->next;
+			}
+			printf("\n");
 		}
-		printf("\n");
-	}
 }
 void afisareDLL_HT(DLL_HT ht) {
-	for (int i = 0; i < ht.dim; i++) {
-		printf("CLUSTER [%d]: ", i);
-		dnod* aux = ht.list[i].head;
-		while (aux) {
-			afisareCard(aux->info);
-			aux = aux->next;
+	if (!ht.list) printf("nu e nmk aici bre");
+	else
+		for (int i = 0; i < ht.dim; i++) {
+			printf("CLUSTER [%d]: ", i);
+			dnod* aux = ht.list[i].head;
+			while (aux) {
+				afisareCard(aux->info);
+				aux = aux->next;
+			}
+			printf("\n");
 		}
-		printf("\n");
-	}
 }
 void afisareVHT(VHT ht) {
-	for (int i = 0; i < ht.dim; i++) {
-		printf("CLUSTER [%d]: ", i);
-		vct aux = ht.list[i];
-		for (int j = 0; j < aux.size; j++) {
-			afisareCard(aux.deck[j]);
+	if (!ht.list) printf("nu e nmk aici bre");
+	else
+		for (int i = 0; i < ht.dim; i++) {
+			printf("CLUSTER [%d]: ", i);
+			vct aux = ht.list[i];
+			for (int j = 0; j < aux.size; j++) {
+				afisareCard(aux.deck[j]);
+			}
+			printf("\n");
 		}
-		printf("\n");
-	}
 }
 //cautare=====================================
 card getCardById_SLLHT(SLL_HT ht, int id) {
@@ -318,20 +324,46 @@ int main() {
 	card test = citireCardDinFisier(f);
 	afisareCard(test);
 	fclose(f);*/
+
+	// 47 89 6
 	//SLL--------------------------------
 	SLL_HT sht = initSLL_HT(10);
 	sht = citireSLL_HT("scards.txt");
 	afisareSLL_HT(sht);
+	card test = getCardById_SLLHT(sht, 47);
+	afisareCard(test);
+	test = getCardById_SLLHT(sht, 89);
+	afisareCard(test);
+	test = getCardById_SLLHT(sht, 6);
+	afisareCard(test);
+	dezalocareSLLHT(&sht);
+	afisareSLL_HT(sht);
 
 	////DLL--------------------------------
-	//DLL_HT dht = initDLL_HT(10);
-	//dht = citireDLL_HT("scards.txt");
-	//afisareDLL_HT(dht);
+	DLL_HT dht = initDLL_HT(10);
+	dht = citireDLL_HT("scards.txt");
+	afisareDLL_HT(dht);
+	test = getCardById_DLLHT(dht, 47);
+	afisareCard(test);
+	test = getCardById_DLLHT(dht, 89);
+	afisareCard(test);
+	test = getCardById_DLLHT(dht, 6);
+	afisareCard(test);
+	dezalocareDLLHT(&dht);
+	afisareDLL_HT(dht);
 
 	////VCT--------------------------------
-	//VHT vht = initVHT(10);
-	//vht = citireVHT("scards.txt");
-	//afisareVHT(vht);
+	VHT vht = initVHT(10);
+	vht = citireVHT("scards.txt");
+	afisareVHT(vht);
+	test = getCardById_VHT(vht, 47);
+	afisareCard(test);
+	test = getCardById_VHT(vht, 89);
+	afisareCard(test);
+	test = getCardById_VHT(vht, 6);
+	afisareCard(test);
+	dezalocareVHT(&vht);
+	afisareVHT(vht);
 
 	return 0;
 }
