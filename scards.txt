@@ -1,0 +1,90 @@
+1,Strike,C,3.50
+2,Defend,C,3.00
+3,Bash,C,4.25
+4,Offering,R,9.75
+5,Anger,C,3.75
+6,Shrug It Off,C,3.25
+7,Pommel Strike,C,4.00
+8,Battle Trance,U,7.50
+9,Reckless Charge,C,4.50
+10,Impervious,R,11.00
+11,Strike,C,3.50
+12,Defend,C,3.00
+13,Neutralize,C,4.75
+14,Survivor,C,3.25
+15,Acrobatics,C,3.00
+16,Blur,U,8.25
+17,Flying Knee,C,4.00
+18,Prepared,C,2.75
+19,Backflip,C,3.50
+20,Predator,U,7.00
+21,Strike,C,3.50
+22,Defend,C,3.00
+23,Zap,C,3.75
+24,Dualcast,U,8.00
+25,Ball Lightning,C,4.25
+26,Compile Driver,C,3.25
+27,Cold Snap,C,4.00
+28,Hologram,U,7.75
+29,Recursion,C,3.50
+30,Meteor Strike,R,13.50
+31,Strike,C,3.50
+32,Defend,C,3.00
+33,Eruption,C,4.00
+34,Vigilance,C,3.75
+35,Consecrate,C,4.50
+36,Evaluate,C,3.25
+37,Halt,U,7.25
+38,Sash Whip,C,4.75
+39,Prostrate,C,3.00
+40,Scrawl,R,10.50
+41,Blind,C,2.50
+42,Dark Shackles,U,6.50
+43,Flash of Steel,C,3.00
+44,Good Instincts,C,2.75
+45,Panacea,U,8.50
+46,Apotheosis,R,14.00
+47,Chrysalis,R,12.75
+48,Hand of Greed,R,11.50
+49,Magnetism,R,13.00
+50,Master of Strategy,R,10.25
+51,Feed,R,12.00
+52,Flame Barrier,U,8.75
+53,Clothesline,C,5.00
+54,Entrench,U,7.00
+55,Sword Boomerang,C,4.25
+56,Bloodletting,U,6.75
+57,Carnage,U,9.00
+58,Disarm,U,8.00
+59,Thunderclap,C,4.50
+60,Spot Weakness,U,7.50
+61,Adrenaline,R,11.75
+62,Burst,R,12.50
+63,Choke,U,7.75
+64,Concentrate,U,6.50
+65,Die Die Die,R,13.25
+66,Endless Agony,C,3.75
+67,Envenom,U,8.25
+68,Footwork,U,9.50
+69,Glass Knife,U,7.25
+70,Grand Finale,R,14.50
+71,Aggregate,U,7.00
+72,Auto-Shields,U,8.50
+73,Barrage,C,4.25
+74,Beam Cell,C,3.50
+75,Biased Cognition,R,15.75
+76,Buffer,R,12.25
+77,Claw,C,3.75
+78,Consume,U,8.00
+79,Darkness,U,7.50
+80,Defragment,U,9.25
+81,Alpha,R,11.25
+82,Battle Hymn,U,8.75
+83,Bowling Bash,C,4.75
+84,Brilliance,R,12.00
+85,Collect,R,13.50
+86,Conclude,U,7.25
+87,Cut Through Fate,U,8.25
+88,Deceive Reality,U,9.00
+89,Empty Body,C,3.25
+90,Empty Fist,C,4.00
